@@ -10,7 +10,7 @@ public class Main {
         ---------------------------------------------------------------------------------
         ApplicationContext and IoC container are closely related.
 
-        AppContext is a type od IoC container.
+        AppContext is a type of IoC container.
 
         It extends the BeanFactory interface.
 
@@ -20,6 +20,13 @@ public class Main {
              1. ClassPathXmlApplicationContext
              2. FileSystemXmlApplicationContext
              3. AnnotationConfigApplicationContext
+
+
+        ApplicationContext is a key component responsible for managing beans, providing features
+        such as dependency injection,
+                lifecycle management of beans,
+                event propagation,
+                internationalization, and others
         ---------------------------------------------------------------------------------
          */
 
