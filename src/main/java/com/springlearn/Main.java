@@ -6,6 +6,23 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
+        /*
+        ---------------------------------------------------------------------------------
+        ApplicationContext and IoC container are closely related.
+
+        AppContext is a type od IoC container.
+
+        It extends the BeanFactory interface.
+
+        It is an interface itself, therefore it can be implemented by its implementations.
+
+        Its implementations are as follows:
+             1. ClassPathXmlApplicationContext
+             2. FileSystemXmlApplicationContext
+             3. AnnotationConfigApplicationContext
+        ---------------------------------------------------------------------------------
+         */
+
         ApplicationContext context = new ClassPathXmlApplicationContext("config/bean-config.xml");
         Student s = context.getBean("student1", Student.class);
         System.out.println(s.getName());
