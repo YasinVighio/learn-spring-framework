@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.springlearn.beans.EnglishMarkSheet" name="marksheet1">
+        <property name="markSheetId" value="1"/>
+        <property name="markSheetGrade" value="A"/>
+
+    </bean>
+
+
+    <bean class="com.springlearn.beans.Student" name="student1">
+        <property name="name" value="Yasin"/>
+        <property name="marksheet" ref="marksheet1"/>
+    </bean>
+
+</beans>
