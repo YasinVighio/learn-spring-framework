@@ -6,13 +6,28 @@
     <bean class="com.springlearn.beans.EnglishMarkSheet" name="marksheet1">
         <property name="markSheetId" value="1"/>
         <property name="markSheetGrade" value="A"/>
+    </bean>
 
+    <bean class="com.springlearn.beans.MathMarksheet" name="marksheet2">
+        <property name="markSheetId" value="2"/>
+        <property name="markSheetGrade" value="A+"/>
+    </bean>
+
+    <bean class="com.springlearn.beans.MathMarksheet" name="marksheet3">
+        <property name="markSheetId" value="2"/>
+        <property name="markSheetGrade" value="A++"/>
     </bean>
 
 
     <bean class="com.springlearn.beans.Student" name="student1">
         <property name="name" value="Yasin"/>
-        <property name="marksheet" ref="marksheet1"/>
+        <property name="marksheet">
+            <list>
+                <ref bean="marksheet1"/>
+                <ref bean="marksheet2"/>
+                <ref bean="marksheet3"/>
+            </list>
+        </property>
     </bean>
 
 </beans>

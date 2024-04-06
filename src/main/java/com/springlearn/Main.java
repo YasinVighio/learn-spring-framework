@@ -9,7 +9,8 @@ public class Main {
         ApplicationContext context = new ClassPathXmlApplicationContext("config/bean-config.xml");
         Student s = context.getBean("student1", Student.class);
         System.out.println(s.getName());
-        System.out.println(s.getMarksheet().getMarkSheetName());
-        System.out.println(s.getMarksheet().getMarkSheetGrade());
+        s.getMarksheet().stream().forEach(
+                marksheet -> System.out.println("Marksheet: " + marksheet.getMarkSheetName() + "\nGrade: " +marksheet.getMarkSheetGrade())
+        );
     }
 }

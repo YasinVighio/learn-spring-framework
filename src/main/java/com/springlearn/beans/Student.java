@@ -1,12 +1,14 @@
 package com.springlearn.beans;
 
+import java.util.List;
+
 public class Student {
 
     private int Id;
     private String name;
     private String grade;
 
-    private Marksheet marksheet;
+    private List<Marksheet> marksheet;
     public int getId() {
         return Id;
     }
@@ -31,11 +33,11 @@ public class Student {
         this.grade = grade;
     }
 
-    public Marksheet getMarksheet() {
+    public List<Marksheet> getMarksheet() {
         return marksheet;
     }
 
-    public void setMarksheet(Marksheet marksheet) {
+    public void setMarksheet(List<Marksheet> marksheet) {
         this.marksheet = marksheet;
     }
 }
