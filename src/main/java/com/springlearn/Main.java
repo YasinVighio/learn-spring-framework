@@ -12,5 +12,15 @@ public class Main {
         s.getMarksheet().stream().forEach(
                 marksheet -> System.out.println("Marksheet: " + marksheet.getMarkSheetName() + "\nGrade: " +marksheet.getMarkSheetGrade())
         );
+
+        s.getContacts().stream().forEach(
+                contact->System.out.println("Contact: " +contact)
+        );
+
+        s.getAddressMap().entrySet().stream().forEach(
+                entry->System.out.println(entry.getKey() + " addr "+ entry.getValue().getAddress()
+                        + " cntct " + entry.getValue().getAddressContact())
+        );
+
     }
 }

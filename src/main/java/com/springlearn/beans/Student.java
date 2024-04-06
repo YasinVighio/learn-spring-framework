@@ -1,10 +1,16 @@
 package com.springlearn.beans;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class Student {
 
     private int Id;
+
+    private Set<String> contacts;
+
+    private Map<String, Address> addressMap;
     private String name;
     private String grade;
 
@@ -39,5 +45,21 @@ public class Student {
 
     public void setMarksheet(List<Marksheet> marksheet) {
         this.marksheet = marksheet;
+    }
+
+    public Set<String> getContacts() {
+        return contacts;
+    }
+
+    public void setContacts(Set<String> contacts) {
+        this.contacts = contacts;
+    }
+
+    public Map<String, Address> getAddressMap() {
+        return addressMap;
+    }
+
+    public void setAddressMap(Map<String, Address> addressMap) {
+        this.addressMap = addressMap;
     }
 }

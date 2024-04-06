@@ -11,6 +11,10 @@
 
     <bean class="com.springlearn.beans.MathMarksheet" name="marksheet2" p:markSheetId="2" p:markSheetGrade="A+"/>
 
+    <bean class="com.springlearn.beans.Address" p:address="home1" p:addressContact="02" name="address1"/>
+
+    <bean class="com.springlearn.beans.Address" p:address="ofc1" p:addressContact="023" name="address2"/>
+
     <bean class="com.springlearn.beans.MathMarksheet" name="marksheet3">
         <property name="markSheetId" value="2"/>
         <property name="markSheetGrade" value="A++"/>
@@ -25,6 +29,21 @@
                 <ref bean="marksheet2"/>
                 <ref bean="marksheet3"/>
             </list>
+        </property>
+
+        <property name="addressMap">
+            <map>
+                <entry key="Home" value-ref="address1"/>
+                <entry key="Ofc" value-ref="address2"/>
+            </map>
+        </property>
+
+        <property name="contacts">
+            <set>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </set>
         </property>
     </bean>
 
