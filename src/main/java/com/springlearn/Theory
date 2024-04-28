@@ -1,0 +1,52 @@
+APPLICATION CONTEXT
+
+        ApplicationContext and IoC container are closely related.
+
+        AppContext is a type of IoC container.
+
+        It extends the BeanFactory interface.
+
+        It is an interface itself, therefore it can be implemented by its implementations.
+
+        Its implementations are as follows:
+             1. ClassPathXmlApplicationContext
+             2. FileSystemXmlApplicationContext
+             3. AnnotationConfigApplicationContext
+
+
+        ApplicationContext is a key component responsible for managing beans, providing features
+        such as dependency injection,
+                lifecycle management of beans,
+                event propagation,
+                internationalization, and others
+
+-------------------------------------------------------------------------------------------------------
+DEPENDENCY INJECTION
+
+Dependency injection is a programming technique in which an object or function receives
+other objects or functions that it requires, as opposed to creating them internally.
+
+It is of two types
+
+    SETTER INJECTION
+
+    Setter injection is also known as property injection
+    - Can be done with p schema
+
+    CONSTRUCTOR INJECTION
+
+    <constructor-args> tag can be used
+
+    The number of <constructor-args> must be same as the args of constructor
+
+
+
+Constructor args can also be passed via c:schema
+
+Argument sequence is not important when using c schema but important when using constructor-arg tag if "index" attrib is not used
+
+The default type used by Spring to set values is string
+
+When two constructors with same number of arguments but different types
+ - If the they string then string constructor will be called
+ - Otherwise whichever is first

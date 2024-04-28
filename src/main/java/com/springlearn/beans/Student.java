@@ -6,6 +6,33 @@ import java.util.Set;
 
 public class Student {
 
+
+    public Student(int id, Set<String> contacts, Certifcate certifcate) {
+        Id = id;
+        this.contacts = contacts;
+        this.certifcate=certifcate;
+    }
+
+
+    public Student(int id, Set<String> contacts, Map<String, Address> addressMap, String name, String grade, List<Marksheet> marksheet) {
+        Id = id;
+        this.contacts = contacts;
+        this.addressMap = addressMap;
+        this.name = name;
+        this.grade = grade;
+        this.marksheet = marksheet;
+    }
+
+    private Certifcate certifcate;
+
+    public Certifcate getCertifcate() {
+        return certifcate;
+    }
+
+    public void setCertifcate(Certifcate certifcate) {
+        this.certifcate = certifcate;
+    }
+
     private int Id;
 
     private Set<String> contacts;
